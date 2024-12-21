@@ -15,12 +15,17 @@ export default function App() {
         style={styles.floatingButton}
       >
         <Text style={{ color: 'white', fontSize: 20 }}>+1</Text>
-      </Pressable> */}
-      <FAB label='+1'
-      onPress={() => setCount(count+1)}
-      onLongPress={() => setCount(0)}
-      positions='rigth'
-      />
+        </Pressable> */}
+        <FAB label='+1'
+        onPress={() => setCount(count+1)}
+        onLongPress={() => setCount(0)}
+        positions='rigth'
+        />
+
+        <FAB label='Reset'
+        onPress={() => setCount(0)}
+        positions='left'
+        />
       <StatusBar style="dark" />
     </View>
   );

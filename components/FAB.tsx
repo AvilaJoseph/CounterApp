@@ -17,11 +17,15 @@ export default function FAB({
   
   return (
     <Pressable
+      
       onPress={onPress}
       onLongPress={onLongPress}
-      style={[styles.floatingButton, 
-      positions === 'rigth' ? styles.rigth : styles.left
+      style={ ({pressed}) => [
+        styles.floatingButton, 
+        positions === 'rigth' ? styles.rigth : styles.left,
+        pressed ? { opacity: 0.5 } : { opacity: 1 }
       ]}
+      
     >
       <Text style={{ color: 'white', fontSize: 20 }}>{label}</Text>
     </Pressable>
@@ -75,5 +79,8 @@ const styles = StyleSheet.create({
   },
   rigth:{
     right:20
+  },
+  Opacidad:{
+    opacity: 0.1
   }
 })
